@@ -12,6 +12,7 @@
 
         cambio = !cambio;
         
+        //si queremos cambiar el color de fondo del body
     }
 
 </script>
