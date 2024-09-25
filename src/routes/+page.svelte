@@ -19,7 +19,7 @@
 
 <style>
     .colorFondo {
-        background-color: aquamarine;
+        background-color: blanchedalmond;
     }
 
     .miClase {
