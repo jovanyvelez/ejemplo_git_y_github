@@ -1,25 +1,15 @@
 <script lang="ts">
-
     let miTexto: HTMLInputElement;
     let cambio = false;
-
-    function cambiar () {
-        cambio ? miTexto.classList.remove('colorFondo'): miTexto.classList.add('colorFondo');
-
-        cambio = !cambio;
-        
-    }
-
 </script>
-
 <form>
-    <button onclick={()=> cambiar()}>Cambiar fondo</button>
-    <input bind:this={miTexto} type="text" placeholder="pon tu texto acá" class="colorFondo miClase" id="miinput">
+    <button onclick={()=> cambio = !cambio}>Cambiar fondo</button>
+    <input bind:this={miTexto} type="text" placeholder="pon tu texto acá" class="miClase" class:colorFondo={cambio}>
 </form>
 
 <style>
     .colorFondo {
-        background-color: blanchedalmond;
+        background-color: rgb(136, 111, 228);
     }
 
     .miClase {
