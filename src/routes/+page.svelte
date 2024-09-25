@@ -3,23 +3,18 @@
     let miTexto: HTMLInputElement;
     let cambio = false;
 
-    $effect(() => {
-        miTexto = document.getElementById('miinput') as HTMLInputElement;
-    })
-
     function cambiar () {
         cambio ? miTexto.classList.remove('colorFondo'): miTexto.classList.add('colorFondo');
 
         cambio = !cambio;
         
-        //si queremos cambiar el color de fondo del body
     }
 
 </script>
 
 <form>
     <button onclick={()=> cambiar()}>Cambiar fondo</button>
-    <input type="text" placeholder="pon tu texto acá" class="colorFondo miClase" id="miinput">
+    <input bind:this={miTexto} type="text" placeholder="pon tu texto acá" class="colorFondo miClase" id="miinput">
 </form>
 
 <style>
